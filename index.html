@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vote Your Favourite Anime!</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>🎌 Vote Your Favourite Anime Character! 🎌</h1>
+
+    <p class="intro">
+      🗳️ Choose one option or write your own! <br>
+      💻 You can also vote online and see results next week!
+    </p>
+
+    <form action="https://formspree.io/f/yourFormIDHere" method="POST" class="vote-form">
+      <label><input type="radio" name="vote" value="Mizuhara" required> Mizuhara (Rent-a-Girlfriend)</label>
+      <label><input type="radio" name="vote" value="Big 3"> Big 3 (Naruto / One Piece / Bleach)</label>
+      <label><input type="radio" name="vote" value="Pokémon"> Pokémon</label>
+      <label><input type="radio" name="vote" value="Shinobu"> Shinobu (Demon Slayer)</label>
+      <label><input type="radio" name="vote" value="Anaya"> Anaya</label>
+      <label class="other">Other: <input type="text" name="vote-other" placeholder="Write your choice here"></label>
+
+      <button type="submit">Submit Vote</button>
+    </form>
+
+    <p class="footer">
+      🔗 Results revealed next week on this board! <br>
+      <a href="results.html">See Results →</a>
+    </p>
+  </div>
+</body>
+</html>
