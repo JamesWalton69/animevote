@@ -16,16 +16,45 @@
       💻 You can also vote online and see results next week!
     </p>
 
-    <form action="https://formspree.io/f/mkgpbzgv" method="POST" class="vote-form">
-      <label><input type="radio" name="vote" value="Mizuhara" required> Mizuhara (Rent-a-Girlfriend)</label>
-      <label><input type="radio" name="vote" value="Big 3"> Big 3 (Naruto / One Piece / Bleach)</label>
-      <label><input type="radio" name="vote" value="Pokémon"> Pokémon</label>
-      <label><input type="radio" name="vote" value="Shinobu"> Shinobu (Demon Slayer)</label>
-      <label><input type="radio" name="vote" value="Anaya"> Anaya</label>
-      <label class="other">Other: <input type="text" name="vote-other" placeholder="Write your choice here"></label>
+    <form id="voteForm" action="https://formspree.io/f/mkgpbzgv" method="POST" class="vote-form">
+  <label><input type="radio" name="vote" value="Mizuhara"> Mizuhara (Rent-a-Girlfriend)</label>
+  <label><input type="radio" name="vote" value="Big 3"> Big 3 (Naruto / One Piece / Bleach)</label>
+  <label><input type="radio" name="vote" value="Pokémon"> Pokémon</label>
+  <label><input type="radio" name="vote" value="Shinobu"> Shinobu (Demon Slayer)</label>
+  <label><input type="radio" name="vote" value="Anaya"> Anaya</label>
+  <label class="other">Other: 
+    <input type="text" name="vote-other" id="otherInput" placeholder="Write your choice here">
+  </label>
 
-      <button type="submit">Submit Vote</button>
-    </form>
+  <button type="submit">Submit Vote</button>
+  <p id="errorMsg" style="color: red; display: none; margin-top: 10px;">
+    ⚠️ Please select an option or type your choice.
+  </p>
+</form>
+
+<script>
+document.getElementById("voteForm").addEventListener("submit", function(e) {
+  const radios = document.querySelectorAll('input[name="vote"]');
+  const otherInput = document.getElementById("otherInput").value.trim();
+  const errorMsg = document.getElementById("errorMsg");
+  let radioChecked = false;
+
+  for (let r of radios) {
+    if (r.checked) {
+      radioChecked = true;
+      break;
+    }
+  }
+
+  if (!radioChecked && otherInput === "") {
+    e.preventDefault();
+    errorMsg.style.display = "block";
+  } else {
+    errorMsg.style.display = "none";
+  }
+});
+</script>
+
 
     <p class="footer">
       🔗 Results revealed next week on this board! <br>
@@ -34,4 +63,5 @@
   </div>
 </body>
 </html>
+
 
