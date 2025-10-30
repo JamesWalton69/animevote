@@ -9,23 +9,37 @@
 </head>
 <body>
   <div class="container">
-    <h1>🎌 Vote Your Favourite Anime Character! 🎌</h1>
+    <h1>🎌 Vote Your Favourite Anime ! 🎌</h1>
 
     <p class="intro">
       🗳️ Choose one option or write your own! <br>
-      💻 You can also vote online and see results next week!
+      💻 Vvote online and see results every 2 week!
     </p>
 
     <form id="voteForm" action="https://formspree.io/f/mkgpbzgv" method="POST" class="vote-form">
-  <label><input type="radio" name="vote" value="Mizuhara"> Mizuhara (Rent-a-Girlfriend)</label>
-  <label><input type="radio" name="vote" value="Big 3"> Big 3 (Naruto / One Piece / Bleach)</label>
-  <label><input type="radio" name="vote" value="Pokémon"> Pokémon</label>
-  <label><input type="radio" name="vote" value="Shinobu"> Shinobu (Demon Slayer)</label>
-  <label><input type="radio" name="vote" value="Anaya"> Anaya</label>
-  <label class="other">Other: 
-    <input type="text" name="vote-other" id="otherInput" placeholder="Write your choice here">
-  </label>
-
+  <label><input type="radio" name="vote" value="One Piece"> One Piece</label>
+<label><input type="radio" name="vote" value="Pokémon"> Pokémon</label>
+<label><input type="radio" name="vote" value="Dragon Ball"> Dragon Ball</label>
+<label><input type="radio" name="vote" value="Naruto"> Naruto</label>
+<label><input type="radio" name="vote" value="Attack on Titan"> Attack on Titan (AOT)</label>
+<label><input type="radio" name="vote" value="Demon Slayer"> Demon Slayer (Kimetsu no Yaiba)</label>
+<label><input type="radio" name="vote" value="Jujutsu Kaisen"> Jujutsu Kaisen</label>
+<label><input type="radio" name="vote" value="My Hero Academia"> My Hero Academia</label>
+<label><input type="radio" name="vote" value="Bleach"> Bleach</label>
+<label><input type="radio" name="vote" value="Fullmetal Alchemist"> Fullmetal Alchemist: Brotherhood</label>
+<label><input type="radio" name="vote" value="Tokyo Revengers"> Tokyo Revengers</label>
+<label><input type="radio" name="vote" value="Spy x Family"> Spy × Family</label>
+<label><input type="radio" name="vote" value="Berserk"> Berserk</label>
+<label><input type="radio" name="vote" value="Your Lie in April"> Your Lie in April</label>
+<label><input type="radio" name="vote" value="Chainsaw Man"> Chainsaw Man</label>
+<label><input type="radio" name="vote" value="Sword Art Online"> Sword Art Online</label>
+<label><input type="radio" name="vote" value="Death Note"> Death Note</label>
+<label><input type="radio" name="vote" value="Rent-a-Girlfriend"> Rent-a-Girlfriend</label>
+<label><input type="radio" name="vote" value="Re:Zero"> Re:Zero − Starting Life in Another World</label>
+<label><input type="radio" name="vote" value="Your Name"> Your Name (Kimi no Na wa)</label>
+<label class="other">Other:
+  <input type="text" name="vote-other" id="otherInput" placeholder="Write your choice here">
+</label>
   <button type="submit">Submit Vote</button>
   <p id="errorMsg" style="color: red; display: none; margin-top: 10px;">
     ⚠️ Please select an option or type your choice.
@@ -57,12 +71,13 @@ document.getElementById("voteForm").addEventListener("submit", function(e) {
 
 
     <p class="footer">
-      🔗 Results revealed next week on this board! <br>
+      🔗 Results are revealed every 2nd week on this board! <br>
       <a href="results.html">See Results →</a>
     </p>
   </div>
 </body>
 </html>
+
 
 
 
